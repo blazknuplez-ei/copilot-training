@@ -1,12 +1,16 @@
 from setuptools import setup, find_packages
 
+# Read README with proper encoding and resource management
+with open('README.md', encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='airline_discount_ml',
     version='0.1.0',
     author='Airline ML Team',
     author_email='team@airline-ml.com',
     description='A training project for learning GitHub Copilot with ML - generates customized airline discounts',
-    long_description=open('README.md', encoding='utf-8').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
